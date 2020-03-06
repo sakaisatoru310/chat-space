@@ -9,6 +9,7 @@ $aef: #38aef0;
 $a: #434a54;
 
 .chat-main{
+  z-index: -1;
   width: calc(100vw - 300px);
   height: 100vh;
   position: absolute;
