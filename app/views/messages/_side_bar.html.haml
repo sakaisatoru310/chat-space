@@ -2,20 +2,17 @@
   .side-bar__user-name
     .side-bar__user-name__title
       .side-bar__user-name__title__name
-        = current_user.name
+        satoru
       .side-bar__user-name__title__icon
-      = link_to "#", class: "side-bar__user-name__title__icon--edit" do
-        = icon('far', 'edit',  class: "side-bar__user-name__title__icon")
-      =link_to edit_user_path(current_user), class: "side-bar__user-name__title__icon--cog" do
-        = icon('fas', 'cog',  class: "side-bar__user-name__title__icon")
+        = link_to new_group_path , class: "side-bar__user-name__title__icon--edit" do
+          = icon('far', 'edit',  class: "side-bar__user-name__title__icon")
+        =link_to "#", class: "side-bar__user-name__title__icon--cog" do
+          = icon('fas', 'cog',  class: "side-bar__user-name__title__icon")
   .side-bar__group-list
-    .side-bar__group-list__box
-      .side-bar__group-list__box__name
-        tech
-      .side-bar__group-list__box__text
-        camp
-    .side-bar__group-list__box
-      .side-bar__group-list__box__name
-        tech
-      .side-bar__group-list__box__text
-        camp
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
