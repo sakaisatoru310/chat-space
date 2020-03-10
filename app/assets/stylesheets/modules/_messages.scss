@@ -8,160 +8,163 @@ $i: #999999;
 $aef: #38aef0;
 $a: #434a54;
 
-.chat-main{
-  z-index: -1;
-  width: calc(100vw - 300px);
-  height: 100vh;
-  position: absolute;
-  right: 0;
-  top: 0;
-  &__group-info{
-    border: solid 1px #eeeeee;
-    height: 100px;
-    background-color: $f;
+  .wrapper{
     display: flex;
-    justify-content: space-between;
-    &__left{
-      &__group{
-        color: $c;
-        font-size: 20px;
-        padding: 35px 0 15px 40px;
-      }
-      &__member{
-        color: $i;
-        font-size: 12px;
-        padding: 0 0 0 40px;
-      }
-    }
-    &__right{
-      &__edit{
-        
-        .edit{
-        text-decoration: none;
-        display: block;
-        font-size: 16px;
-        color: $aef;
-        border: 1px solid;
-        line-height: 40px;
-        padding: 0 20px;
-        position: absolute;
-        top: 28px;
-        right: 40px;
-        }
-      }
-    }
-  }
-  &__message-list{
-    height: calc(100vh - 100px - 90px);
-    background-color: #fafafa;
-    &__box{
-      
-      &__name{
-        color: $c;
-        font-size: 16px;
-        padding: 35px 0 12px 40px;
+    .chat-main{
+      width: calc(100vw - 300px);
+      height: 100vh;
+      &__group-info{
+        border: solid 1px #eeeeee;
+        height: 100px;
+        background-color: $f;
         display: flex;
-        font-weight: bold;
-        &__time{
-          color: $i;
-          font-size: 12px;
-          font-weight: normal;
+        justify-content: space-between;
+        &__left{
+          &__group{
+            color: $c;
+            font-size: 20px;
+            padding: 35px 0 15px 40px;
+          }
+          &__member{
+            color: $i;
+            font-size: 12px;
+            padding: 0 0 0 40px;
+          }
+        }
+        &__right{
+          &__edit{
+            
+            .edit{
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            color: $aef;
+            border: 1px solid;
+            line-height: 40px;
+            padding: 0 20px;
+            position: absolute;
+            top: 28px;
+            right: 40px;
+            }
+          }
         }
       }
-      &__text{
-        color: $a;
-        font-size: 14px;
-        padding: 0 0 9px 40px;
+      &__message-list{
+        height: calc(100vh - 100px - 90px);
+        background-color: #fafafa;
+        &__box{
+          
+          &__name{
+            color: $c;
+            font-size: 16px;
+            padding: 35px 0 12px 40px;
+            display: flex;
+            font-weight: bold;
+            &__time{
+              color: $i;
+              font-size: 12px;
+              font-weight: normal;
+            }
+          }
+          &__text{
+            color: $a;
+            font-size: 14px;
+            padding: 0 0 9px 40px;
+          }
+        }
+      }
+      .form{
+        padding: 20px 40px;
+        height: 90px;
+        background-color: #d2d2d2;
+        &__text{
+          display: inline-block;
+          height: 50px;
+          width: 100%;
+          color: $a;
+          border-style: none;
+          padding: 0 40px 0 10px;
+        }
+          &__box{
+            display: flex;
+            width: 100%;
+            position: relative;
+            
+            
+            &__image{
+              position: absolute;
+              top: 10px;
+              right: 130px;
+              cursor: pointer;
+              font-size: 1.3rem;
+            }
+            &__file{
+              display: none;
+            }
+          }
+        &__send{
+          &__submit{
+            width: 100px;
+            height: 50px;
+            padding: 0 30px;
+            margin-left: 15px;
+            background-color: $aef;
+            color: $f;
+            cursor: pointer;
+          }
+        }
       }
     }
-  }
-  &__message-from{
-    padding: 20px 40px;
-    display: flex;
-    height: 90px;
-    background-color: #d2d2d2;
-    &__box{
-      width: 100%;
-      position: relative;
-      &__text{
-        height: 50px;
-        width: 100%;
-        color: $a;
-        border-style: none;
-        padding: 0 40px 0 10px;
 
+    .side-bar{
+      width: 300px;
+      height: 100vh;
+      &__user-name{
+        height: 100px;
+        background-color: #253141;
+        &__title{
+          height: 20px;
+          width: 260px;
+          position: absolute;
+          top: 40px;
+          left: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          line-height: 20px;
+          &__name{
+            font-size: 16px;
+            color: $f;
+            font-weight: bold;
+          }
+          &__icon{
+            color: $f;
+            &--edit{
+              margin-left: auto;
+              margin-right: 5px;
+            }
+          }
+        }
       }
-      &__image{
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        font-size: 1.3rem;
-      }
-      &__file{
-        display: none;
-      }
-    }
-    .submit-btn{
-      width: 100px;
-      height: 50px;
-      padding: 0 30px;
-      margin-left: 15px;
-      background-color: $aef;
-      color: $f;
-      cursor: pointer;
-    }
-  }
-}
-
-.side-bar{
-  width: 300px;
-  height: 100vh;
-  &__user-name{
-    height: 100px;
-    background-color: #253141;
-    &__title{
-      height: 20px;
-      width: 260px;
-      position: absolute;
-      top: 40px;
-      left: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      line-height: 20px;
-      &__name{
-        font-size: 16px;
-        color: $f;
-        font-weight: bold;
-      }
-      &__icon{
-        color: $f;
-        &--edit{
-          margin-left: auto;
-          margin-right: 5px;
+      &__group-list{
+        background-color: #2f3e51;
+        height: calc(100vh - 100px);
+        .group{
+          
+          &__name{
+            font-size: 15px;
+            margin: 0px 20px 5px 20px;
+            color: $f;
+            padding-top:20px;
+            font-weight: bold;
+          }
+          &__message{
+            font-size: 11px;
+            margin: 0px 20px 40px 20px;
+            color: $f;
+            font-weight: bold;
+          }
         }
       }
     }
   }
-  &__group-list{
-    background-color: #2f3e51;
-    height: calc(100vh - 100px);
-    .group{
-      
-      &__name{
-        font-size: 15px;
-        margin: 0px 20px 5px 20px;
-        color: $f;
-        padding-top:20px;
-        font-weight: bold;
-      }
-      &__message{
-        font-size: 11px;
-        margin: 0px 20px 40px 20px;
-        color: $f;
-        font-weight: bold;
-      }
-    }
-  }
-}

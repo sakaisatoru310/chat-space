@@ -2,7 +2,7 @@
   .side-bar__user-name
     .side-bar__user-name__title
       .side-bar__user-name__title__name
-        satoru
+        = current_user.name
       .side-bar__user-name__title__icon
         = link_to new_group_path , class: "side-bar__user-name__title__icon--edit" do
           = icon('far', 'edit',  class: "side-bar__user-name__title__icon")
@@ -11,8 +11,8 @@
   .side-bar__group-list
     - current_user.groups.each do |group|
       .group
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .group__name
             = group.name
           .group__message
-            メッセージはまだありません。
+            = group.show_last_message
