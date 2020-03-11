@@ -50,6 +50,7 @@ $a: #434a54;
         }
       }
       &__message-list{
+        overflow: auto;
         height: calc(100vh - 100px - 90px);
         background-color: #fafafa;
         &__box{
@@ -147,6 +148,7 @@ $a: #434a54;
         }
       }
       &__group-list{
+        overflow: auto;
         background-color: #2f3e51;
         height: calc(100vh - 100px);
         .group{
