@@ -32,6 +32,8 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 
+  set :linked_files, %w{ config/secrets.yml }
+
   desc 'upload secrets.yml'
   task :upload do
     on roles(:app) do |host|
@@ -45,4 +47,4 @@ namespace :deploy do
   after :finishing, 'deploy:cleanup'
 end
 
-set :linked_files, %w{ config/secrets.yml }
+
