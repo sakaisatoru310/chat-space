@@ -4,6 +4,7 @@
       .chat-main__group-info__left__group
         = @group.name
       .chat-main__group-info__left__member
+        Member:
         - @group.group_users.each do |group_user|
           %span.member
           = group_user.user.name
